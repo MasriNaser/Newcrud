@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "title": "newing",
+      "logoUrl": "https://loremflickr.com/g/320/240/paris/all",
+      "username": "idlbiinggg",
+      "id": 4,
+      "email": "",
+      "password": ""
+    },
+    {
+      "title": "next",
+      "logoUrl": "http://loremflickr.com/400/500/man",
+      "username": "lan",
+      "id": 5,
+      "email": "",
+      "password": ""
+    }
+  ]
+}
