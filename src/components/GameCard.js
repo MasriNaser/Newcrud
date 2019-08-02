@@ -1,7 +1,16 @@
+// @flow
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function GameCard({ i, onDelete }) {
+import Button from '@material-ui/core/Button';
+
+type Props = {
+  i: Object,
+  onDelete: (id: number) => void,
+  
+};
+
+export default function GameCard({ i, onDelete }: Props) {
   return (
     <Fragment>
       <div className='ui card'>
@@ -20,7 +29,7 @@ export default function GameCard({ i, onDelete }) {
               <Link to={`/game/${i.id}`} className='ui basic green button'>
                 Edit
               </Link>
-              <div className='ui basic red button' onClick={() => onDelete(i.id)}>Delete</div>
+              <Button className='ui basic red button' onClick={() => onDelete(i.id)}>Delete</Button>
             </div>
           </div>
         </div>

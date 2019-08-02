@@ -1,9 +1,16 @@
+
+// @flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import GamesList from './GamesList';
 import { fetchGames, deleteGame } from '../actions/actions';
+type GamesPageProps ={
+  fetchGames: ()=> void,
+  deleteGame: (id: number)=> void,
+  games: Object,
+}
 
-class GamesPage extends Component {
+class GamesPage extends Component<GamesPageProps>{
   componentDidMount() {
     this.props.fetchGames();
   }
@@ -12,7 +19,6 @@ class GamesPage extends Component {
     this.props.deleteGame(id);
   };
   render() {
-    //console.log(this.props.games, 'from GamesPage');
     return (
       <div>
         <h1>Game Page</h1>

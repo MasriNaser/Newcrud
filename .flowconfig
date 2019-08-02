@@ -1,0 +1,15 @@
+[ignore]
+.*/node_module/.*
+.*/src/serviceWorker\.js
+.*\.test\.js
+
+[include]
+
+[libs]
+flow-typed
+[lints]
+
+[options]
+
+
+[strict]

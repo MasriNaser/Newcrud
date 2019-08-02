@@ -1,7 +1,12 @@
+// @flow
 import React from 'react';
 import GameCard from './GameCard';
 
-function GamesList({ items,onDelete }) {
+type Props ={
+  items: [],
+  onDelete: (id: number)=> void
+}
+function GamesList({ items,onDelete }: Props) {
   const emptyMessage = <p>no games</p>;
   // let id = items.map((i,index)=>{
   //   return index

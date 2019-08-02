@@ -1,18 +1,6 @@
 {
   "users": [
     {
-      "title": "testing",
-      "logoUrl": "https://loremflickr.com/g/320/240/paris",
-      "username": "paris",
-      "id": 6
-    },
-    {
-      "title": "testing",
-      "logoUrl": "https://loremflickr.com/g/320/240/paris",
-      "username": "musting3",
-      "id": 7
-    },
-    {
       "title": "testing4",
       "logoUrl": "https://loremflickr.com/g/320/240/paris",
       "username": "testing4",
@@ -47,12 +35,6 @@
       "logoUrl": "https://loremflickr.com/g/320/240/paris",
       "username": "testing9",
       "id": 13
-    },
-    {
-      "title": "testing10",
-      "logoUrl": "https://loremflickr.com/g/320/240/paris",
-      "username": "testing10",
-      "id": 14
     }
   ]
 }

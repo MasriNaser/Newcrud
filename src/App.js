@@ -1,3 +1,4 @@
+// @flow
 import './App.css';
 import React, { Component } from 'react';
 import GamesPage from './components/GamesPage';
@@ -5,8 +6,10 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import GamesForm from './components/GameForm';
 import Home from './components/Home';
 
-
-export default class App extends Component {
+type APP = {
+  component: Object
+};
+class App extends Component<App> {
   render() {
     return (
       <div className='ui container'>
@@ -46,3 +49,4 @@ export default class App extends Component {
     );
   }
 }
+export default App;
