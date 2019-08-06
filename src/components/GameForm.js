@@ -89,7 +89,7 @@ class GameForm extends Component {
         className={classnames('ui', 'form', { loading: this.state.loading })}
         onSubmit={this.handleSubmit}
       >
-        <h1>Add new as</h1>
+        <h1>Add new game</h1>
         <div
           className={classnames('field', { error: this.state.errors.title })}
         >
@@ -148,16 +148,10 @@ class GameForm extends Component {
   }
 }
 const mapStateToProps = (state, props) => {
-  //console.log(props, 'from GameForm');
-  // if (props.match.params.id) {
   let id = parseInt(props.match.params.id);
   return {
     as: state.games.items.find(item => item.id === id)
   };
-  // }
-  // return {
-  //   as: null
-  // };
 };
 
 export default connect(

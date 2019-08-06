@@ -8,9 +8,6 @@ type Props ={
 }
 function GamesList({ items,onDelete }: Props) {
   const emptyMessage = <p>no games</p>;
-  // let id = items.map((i,index)=>{
-  //   return index
-  // })
   const itemsList = (
     <div className='ui four cards'>
       {items.map((i,index) => (

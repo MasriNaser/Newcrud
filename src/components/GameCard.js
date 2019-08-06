@@ -7,10 +7,10 @@ import Button from '@material-ui/core/Button';
 type Props = {
   i: Object,
   onDelete: (id: number) => void,
-  
+  style?: Object
 };
 
-export default function GameCard({ i, onDelete }: Props) {
+export default function GameCard({ i, onDelete, style }: Props) {
   return (
     <Fragment>
       <div className='ui card'>
@@ -21,15 +21,24 @@ export default function GameCard({ i, onDelete }: Props) {
               src={i.logoUrl}
               alt='Game Cover'
             />
-            <div className='header right floated mg:2'>{i.title}</div>
-            <div className='meta'>{i.username}</div>
+            <div className='header right floated' style={style}>
+              {i.title}
+            </div>
+            <div className='meta' style={style}>
+              {i.username}
+            </div>
           </div>
           <div className='extra content'>
             <div className='ui two buttons'>
               <Link to={`/game/${i.id}`} className='ui basic green button'>
                 Edit
               </Link>
-              <Button className='ui basic red button' onClick={() => onDelete(i.id)}>Delete</Button>
+              <Button
+                className='ui basic red button'
+                onClick={() => onDelete(i.id)}
+              >
+                Delete
+              </Button>
             </div>
           </div>
         </div>

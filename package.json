@@ -1,6 +1,6 @@
 {
   "name": "clear",
-  "version": "cd newcrud",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.3.0",
@@ -8,16 +8,19 @@
     "classnames": "^2.2.5",
     "firebase": "^6.3.3",
     "flow": "^0.2.3",
+    "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
-    "react-redux-firebase": "^2.3.0",
+    "react-redux-firebase": "^3.0.0-alpha.14",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "redux": "^4.0.4",
     "redux-firestore": "^0.8.0",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.87.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,7 +28,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server --watch db.json --port 3004",
-    "flow": "flow"
+    "flow": "flow",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -48,7 +53,12 @@
   "author": "yarn start",
   "license": "yarn install",
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@storybook/addon-actions": "^5.1.10",
+    "@storybook/addon-links": "^5.1.10",
+    "@storybook/react": "^5.1.10",
     "flow-bin": "^0.104.0",
+    "storybook-react-router": "^1.0.5",
     "uuid": "^3.3.2"
   }
 }

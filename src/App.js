@@ -1,5 +1,4 @@
 // @flow
-import './App.css';
 import React, { Component } from 'react';
 import GamesPage from './components/GamesPage';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';

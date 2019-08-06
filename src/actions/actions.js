@@ -4,8 +4,10 @@ import {
   SAVE_GAME,
   DELETE_GAME,
   UPDATE_GAME,
-  ADD_GAME_FIRE
+  LOGIN_SUCCESS,
+  LOGIN_ERROR
 } from './types';
+// import { getFirebase } from 'react-redux-firebase';
 
 export const fetchGames = () => dispatch => {
   fetch('http://localhost:3004/users')
@@ -21,7 +23,6 @@ export const fetchGame = id => dispatch => {
   fetch(`http://localhost:3004/users/${id}`)
     .then(res => res.json())
     .then(user => {
-      // console.log(user, 'user from fetchGameeeeeeeee');
       dispatch({
         type: FETCH_GAME,
         payload: user
@@ -84,19 +85,24 @@ export const upDateGame = updatedItem => dispatch => {
       });
     });
 };
-// export const passData = user => dispatch => ({
-//   return fetch('http://localhost:3004/users/', {
-//     method: 'PUT',
-//     body: JSON.stringify(user),
-//     headers: {
-//       'content-type': 'application/json'
-//     }
-//   })
-//     .then(res => res.json())
-//     .then(user => {
-//       return dispatch({
-//         type: 'PASS_DATA',
-//   payload: user
-//       });
-//     });
-//     }
+export const signIn = credentials => {
+  return (dispatch, getState, { getFirestore }) => {
+    const firestore = getFirestore();
+    const { email, password } = credentials;
+    firestore
+      .collection('games')
+      .add({
+        ...credentials,
+      })
+      .then(() => dispatch({ type: LOGIN_SUCCESS }))
+      .catch(error =>
+        dispatch({
+          type: LOGIN_ERROR,
+          error
+        })
+      );
+  };
+};
+
+
+

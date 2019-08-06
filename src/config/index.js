@@ -1,5 +1,6 @@
 import firebase from 'firebase/app'
 import 'firebase/firestore'
+import 'firebase/auth'
 //import { API_KEY } from './key'
 // Initialize Firebase
 const config = {

@@ -1,26 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { createStore, applyMiddleware, compose } from 'redux';
-import { Provider } from 'react-redux';
-import { reduxFirestore, getFirestore } from 'redux-firestore';
-import thunk from 'redux-thunk';
-import rootReducer from './reducers/rootReducer';
-import firebase from './config/';
-import logger from 'redux-logger';
+import 'semantic-ui-css/semantic.min.css';
 import { BrowserRouter } from 'react-router-dom';
-const Store = createStore(
-  rootReducer,
-  compose(
-    applyMiddleware(thunk.withExtraArgument({ getFirestore }), logger),
-    reduxFirestore(firebase)
-  )
-);
+import { Provider } from 'react-redux';
+import configureStore from './reducers/index';
+
+const store = configureStore();
+
 ReactDOM.render(
   <BrowserRouter>
-    <Provider store={Store}>
+    <Provider store={store}>
       <App />
     </Provider>
   </BrowserRouter>,
