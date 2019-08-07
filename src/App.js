@@ -5,10 +5,10 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import GamesForm from './components/GameForm';
 import Home from './components/Home';
 
-type APP = {
+type Props = {
   component: Object
 };
-class App extends Component<App> {
+class App extends Component<Props> {
   render() {
     return (
       <div className='ui container'>

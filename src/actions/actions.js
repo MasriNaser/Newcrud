@@ -88,7 +88,7 @@ export const upDateGame = updatedItem => dispatch => {
 export const signIn = credentials => {
   return (dispatch, getState, { getFirestore }) => {
     const firestore = getFirestore();
-    const { email, password } = credentials;
+    // const { email, password } = credentials;
     firestore
       .collection('games')
       .add({

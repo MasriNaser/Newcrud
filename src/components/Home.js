@@ -70,7 +70,7 @@ class Home extends Component<Props, iState> {
   };
   render() {
     const { spinner } = this.props;
-    const { loading } = this.state;
+    // const { loading } = this.state;
     return (
       <Container>
         <form
