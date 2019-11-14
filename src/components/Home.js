@@ -70,7 +70,6 @@ class Home extends Component<Props, iState> {
   };
   render() {
     const { spinner } = this.props;
-    // const { loading } = this.state;
     return (
       <Container>
         <form
@@ -88,7 +87,6 @@ class Home extends Component<Props, iState> {
               id='email'
               name='email'
               value={this.state.email || ''}
-              // placeholder={as ? as.title : ''}
               onChange={this.handleChange}
             />
             <span>{this.state.errors.email}</span>
