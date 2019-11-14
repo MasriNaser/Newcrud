@@ -119,7 +119,7 @@ class Home extends Component<Props, iState> {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    create: creds => {
+      create: creds => {
       dispatch(signIn(creds));
     }
   };
